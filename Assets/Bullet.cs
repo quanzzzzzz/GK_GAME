@@ -11,4 +11,5 @@ var newPosition = transform.position;
 newPosition.y += Time.deltaTime * flySpeed;
 transform.position = newPosition;
 }
+
 }
