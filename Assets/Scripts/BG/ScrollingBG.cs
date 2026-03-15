@@ -12,9 +12,7 @@ public class ScrollingBackground : MonoBehaviour
 
     void Update()
     {
-        // Tạo độ lệch dựa trên thời gian
         float offset = Time.time * speed;
-        // Áp dụng vào Material để tạo hiệu ứng cuộn
         bgRenderer.material.mainTextureOffset = new Vector2(0, offset);
     }
 }

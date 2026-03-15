@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyAttack : MonoBehaviour
+public class EnemyShooter : MonoBehaviour
 {
     public Transform player;
     public GameObject bulletPrefab;
@@ -11,8 +11,17 @@ public class EnemyAttack : MonoBehaviour
 
     float lastShot;
 
+    bool canShoot = false; // chỉ bắn khi enemy dừng
+
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
     void Update()
     {
+        if (!canShoot) return;
+
         if (player == null || bulletPrefab == null || firePoint == null) return;
 
         AimFirePointToPlayer();
@@ -22,6 +31,11 @@ public class EnemyAttack : MonoBehaviour
             Shoot();
             lastShot = Time.time;
         }
+    }
+
+    public void StartShooting()
+    {
+        canShoot = true;
     }
 
     void AimFirePointToPlayer()

@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 8542291821695901943}
   - component: {fileID: 8491209247444131060}
   - component: {fileID: 6799433858008815414}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: Machine Gun
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -173,7 +173,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  flySpeed: 0.5
   damage: 1
 --- !u!82 &6799433858008815414
 AudioSource:
